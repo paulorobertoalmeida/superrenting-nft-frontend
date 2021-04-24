@@ -3,6 +3,7 @@ import { Button, Card } from 'react-bootstrap'
 
 
 
+
 export default function MarketPlace() {
     const gradientButton = {
         color:'white',
@@ -24,7 +25,8 @@ export default function MarketPlace() {
             display:'flex',
             flexDirection:'column',
             width:'85%', 
-            background: 'rgba(255,255, 255, 0.2)', 
+            background: 'rgb(34,0,29)',
+            background: 'linear-gradient(0deg, rgba(34,0,29,1) 0%, rgba(106,22,93,1) 32%, rgba(157,38,138,1) 66%, rgba(255,0,216,1) 100%)',
             margin:'auto', 
             padding:'20px',
             borderRadius:'2em',
@@ -56,7 +58,7 @@ export default function MarketPlace() {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Rent</Button>
                 </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem', margin:'10px' }}>
@@ -66,7 +68,7 @@ export default function MarketPlace() {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Rent</Button>
                 </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem', margin:'10px' }}>
@@ -76,7 +78,7 @@ export default function MarketPlace() {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Rent</Button>
                 </Card.Body>
                 </Card>
                 <Card style={{ width: '18rem', margin:'10px' }}>
@@ -86,7 +88,7 @@ export default function MarketPlace() {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Rent</Button>
                 </Card.Body>
                 </Card>
                 </div>

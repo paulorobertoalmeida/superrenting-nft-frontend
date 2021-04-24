@@ -1,8 +1,10 @@
 import React from 'react'
-import { Navbar, Nav ,Button } from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 import './main.css'
+import { WalletButton } from './WalletButton'
+import { Link } from 'react-router'
 
-export default function PageNavbar() {
+  
   const fontStyle = {
     color: 'white',
     fontWeight:'500',
@@ -11,10 +13,14 @@ export default function PageNavbar() {
     color: 'white',
   };
 
-  const buttonStyle ={
+  const buttonStyle = {
     fontWeight:'500',
     borderRadius:'15px',
   };
+
+  const PageNavbar = (props) => {
+    // eslint-disable-next-line
+    console.log(props.logoutOfWeb3Modal);
 
     return (
         <div>
@@ -28,14 +34,17 @@ export default function PageNavbar() {
         <Nav.Link href="#home" style={linkStyle}>Docs</Nav.Link>
         </Nav>
           <Navbar.Text>
-          <Button variant="warning" style={buttonStyle}>Connect Wallet</Button>
+          <WalletButton
+              provider={props.provider}
+              loadWeb3Modal={props.loadWeb3Modal}
+              logoutOfWeb3Modal={props.logoutOfWeb3Modal}
+            />
           </Navbar.Text>
         </Navbar.Collapse>
       </Navbar>
             
         </div>
-    )
+    );
 }
 
-
-
+export default PageNavbar;
