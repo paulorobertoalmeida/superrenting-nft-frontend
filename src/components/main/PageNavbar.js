@@ -28,7 +28,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
       
         <div>
             <Navbar>
-            <Navbar.Brand href="#home" style={fontStyle}>SuperRenting</Navbar.Brand>
+            <img src="img/brand.png" style={fontStyle}></img>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">           
             <Nav>
