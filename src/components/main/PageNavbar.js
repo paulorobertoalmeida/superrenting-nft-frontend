@@ -30,14 +30,13 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
             <Navbar>
             <Navbar.Brand href="#home" style={fontStyle}>SuperRenting</Navbar.Brand>
             <Navbar.Toggle />
-            <Navbar.Collapse className="justify-content-end">
-            <Switch>
+            <Navbar.Collapse className="justify-content-end">           
             <Nav>
-            <Link to="/marketpage" style={linkStyle}>Market Place</Link>
-            <Link to="/" style={linkStyle}>About Us</Link>
-            <Link to="/" style={linkStyle}>Docs</Link>
+            <Link to="/" style={linkStyle}>Market Place</Link>
+            <Link to="/" style={linkStyle}>Mint & Rent</Link>
+            {/* <Link to="/" style={linkStyle}>About Us</Link>
+            <Link to="/" style={linkStyle}>Docs</Link> */}
             </Nav>
-            </Switch>
               <Navbar.Text>
               <WalletButton
                   provider={props.provider}
