@@ -30,7 +30,7 @@ export default function MarketPlace() {
             margin:'auto', 
             padding:'20px',
             borderRadius:'2em',
-            border:'solid 2px transparent'
+            
             
         }}>
             <h1 style={{margin: 'auto'}}>Market Place</h1>

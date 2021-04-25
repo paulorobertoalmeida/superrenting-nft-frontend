@@ -2,7 +2,8 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import './main.css'
 import { WalletButton } from './WalletButton'
-import { Link } from 'react-router'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+
 
   
   const fontStyle = {
@@ -11,6 +12,7 @@ import { Link } from 'react-router'
   };
   const linkStyle = {
     color: 'white',
+    marginLeft:'15px'
   };
 
   const buttonStyle = {
@@ -19,31 +21,34 @@ import { Link } from 'react-router'
   };
 
   const PageNavbar = (props) => {
-    // eslint-disable-next-line
+    
     console.log(props.logoutOfWeb3Modal);
 
     return (
+      <Router>
         <div>
-        <Navbar>
-        <Navbar.Brand href="#home" style={fontStyle}>SuperRenting</Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-        <Nav >
-        <Nav.Link href="#home" style={linkStyle}>Market Place</Nav.Link>
-        <Nav.Link href="#home" style={linkStyle}>About Us</Nav.Link>
-        <Nav.Link href="#home" style={linkStyle}>Docs</Nav.Link>
-        </Nav>
-          <Navbar.Text>
-          <WalletButton
-              provider={props.provider}
-              loadWeb3Modal={props.loadWeb3Modal}
-              logoutOfWeb3Modal={props.logoutOfWeb3Modal}
-            />
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Navbar>
-            
+            <Navbar>
+            <Navbar.Brand href="#home" style={fontStyle}>SuperRenting</Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+            <Switch>
+            <Nav>
+            <Link to="/" style={linkStyle}>Market Place</Link>
+            <Link to="/" style={linkStyle}>About Us</Link>
+            <Link to="/" style={linkStyle}>Docs</Link>
+            </Nav>
+            </Switch>
+              <Navbar.Text>
+              <WalletButton
+                  provider={props.provider}
+                  loadWeb3Modal={props.loadWeb3Modal}
+                  logoutOfWeb3Modal={props.logoutOfWeb3Modal}
+                />
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </Navbar>
         </div>
+        </Router>
     );
 }
 

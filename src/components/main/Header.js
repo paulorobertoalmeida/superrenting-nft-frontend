@@ -25,9 +25,7 @@ export default function Header() {
     const headerContainer2= {
         display:'flex',
         flexDirection:'column',
-        padding:'1rem',
-        height:'80%',
-        width: '50%',
+        padding:'1rem'
         
     };
 
@@ -53,7 +51,7 @@ export default function Header() {
             </div>
             <Button variant="warning" style={gradientButton}>Start Now</Button>
         </div>
-        <div style={headerContainer2}>
+        <div class="image-header" style={headerContainer2}>
         <img src="/img/logo.png" alt="SR-logo" />
         </div>
         </div>

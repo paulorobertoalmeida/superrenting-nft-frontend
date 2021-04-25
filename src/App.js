@@ -10,7 +10,9 @@ import TopRenters from './components/main/TopRenters'
 import Games from './components/main/Games'
 import SocialMedia from './components/main/SocialMedia'
 import Footer from './components/main/Footer'
-import useWeb3Modal from "./hooks/useWeb3Modal"
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import useWeb3Modal from './hooks/useWeb3Modal'
+import MarketPage from './MarketPage'
 
 function App() {
   const lpContainer = {
@@ -26,22 +28,37 @@ function App() {
   
 
   return (
-    <div style={lpContainer}>
-      <PageNavbar 
-      provider={provider}
-      loadWeb3Modal={loadWeb3Modal}
-      logoutOfWeb3Modal={logoutOfWeb3Modal}
-      />
-      <Header />
-      <MarketPlace />
-      {/* <LorenIpsun />
-      <LastRented />
-      <AboutUs />
-      <TopRenters />
-      <Games />
-      <SocialMedia /> */}
-      <Footer />
-    </div>
+    <Router>
+      <div style={lpContainer}>
+      
+        <PageNavbar 
+        provider={provider}
+        loadWeb3Modal={loadWeb3Modal}
+        logoutOfWeb3Modal={logoutOfWeb3Modal}
+        />
+        <Switch>
+        <Route exact path='/marketpage'>
+        <MarketPage />
+        </Route>
+        <Route exact path='/about'>
+        <MarketPage />
+        </Route>
+        <Route exact path='/docs'>
+        <MarketPage />
+        </Route>
+        
+        </Switch>
+        <Header />
+        <MarketPlace />
+        {/* <LorenIpsun />
+        <LastRented />
+        <AboutUs />
+        <TopRenters />
+        <Games />
+        <SocialMedia /> */}
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
