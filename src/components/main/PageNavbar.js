@@ -25,7 +25,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
     console.log(props.logoutOfWeb3Modal);
 
     return (
-      <Router>
+      
         <div>
             <Navbar>
             <Navbar.Brand href="#home" style={fontStyle}>SuperRenting</Navbar.Brand>
@@ -33,7 +33,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
             <Navbar.Collapse className="justify-content-end">
             <Switch>
             <Nav>
-            <Link to="/" style={linkStyle}>Market Place</Link>
+            <Link to="/marketpage" style={linkStyle}>Market Place</Link>
             <Link to="/" style={linkStyle}>About Us</Link>
             <Link to="/" style={linkStyle}>Docs</Link>
             </Nav>
@@ -48,7 +48,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
             </Navbar.Collapse>
           </Navbar>
         </div>
-        </Router>
+        
     );
 }
 
