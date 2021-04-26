@@ -1,0 +1,45 @@
+
+#showcase h1{
+    position: relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0%   {top: -800px;}
+    100% {top: -30px;}
+  }
+  
+
+  #content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes content {
+    0%   {left: -1000px;}
+    100% {left: 0;}
+  }
+
+  #main-page-btn{
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+  
+  .btn:hover {
+    
+  }
+  
+  @keyframes btn {
+    0%   {opacity:0}
+    100% {opacity: 1}
+  } 
+  
