@@ -1,6 +1,8 @@
 
+/* LANDING PAGE ANIMATION */
+
 #showcase h1{
-    position: relative;
+  position: relative;
   animation: heading;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -43,3 +45,5 @@
     100% {opacity: 1}
   } 
   
+
+  /* LANDING PAGE ANIMATION */
