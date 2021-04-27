@@ -2,7 +2,7 @@ import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import './main.css'
 import { WalletButton } from './WalletButton'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 
   
@@ -20,15 +20,19 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
     borderRadius:'15px',
   };
 
+  const navPosition = {
+    position: 'sticky'
+  }
+
   const PageNavbar = (props) => {
     
     console.log(props.logoutOfWeb3Modal);
 
     return (
       
-        <div>
+        <div style={navPosition}>
             <Navbar>
-            <img src="img/brand.png" style={fontStyle}></img>
+            <h1>SuperRenting.</h1>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">           
             <Nav>

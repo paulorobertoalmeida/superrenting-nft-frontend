@@ -43,11 +43,11 @@ export default function Header() {
     return (
         <div style={mainContainer}>
         <div id="showcase" style={headerContainer}>
-            <h1 style={{margin: 'auto', fontWeight:'800'}}>Loren Ipsun</h1>
+            <h1 style={{fontWeight:'800'}}> Rent, Play & Return </h1>
             <div id="content" style={{margin: '5px'}}>
-            <p>Provident similique accusantium nemo autem. </p> 
-            <p>Veritatis obcaecati tenetur iure eius earum ut molestias </p>
-            <p>architecto voluptate aliquam nihil eveniet aliquid culpa officia aut!</p>
+            <p>What About Renting Your favourite Items  <br />
+            Insted of Spend a lot of Money Buying??<br />     
+            SuperRenting is the platform the makes this happens</p>
             </div>
             <Button id="main-page-btn" variant="warning" style={gradientButton}>Start Now</Button>
         </div>
