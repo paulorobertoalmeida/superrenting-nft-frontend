@@ -3,26 +3,36 @@ import { Navbar, Nav } from 'react-bootstrap'
 import './main.css'
 import { WalletButton } from './WalletButton'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 
-  
+  const NavContainer = styled.div`
+    color: white;
+    margin-left: 40px;
+  `; 
+
   const fontStyle = {
-    color: 'white',
-    fontWeight:'500',
+    color: 'white'
+    
   };
   const linkStyle = {
     color: 'white',
     marginLeft:'15px'
   };
+ const LinkStyle = styled.a`
+  cursor: pointer;
+  color: white;
+  margin-left: 15px;
 
-  const buttonStyle = {
-    fontWeight:'500',
-    borderRadius:'15px',
-  };
+  &:hover {
+    color: purple;
+    text-decoration: none;
 
-  const navPosition = {
-    position: 'sticky'
   }
+ `;
+
+
+
 
   const PageNavbar = (props) => {
     
@@ -30,14 +40,14 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
     return (
       
-        <div style={navPosition}>
+        <NavContainer>
             <Navbar>
-            <h1>SuperRenting.</h1>
+            <h3>SuperRenting.</h3>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">           
             <Nav>
-            <Link to="/" style={linkStyle}>Market Place</Link>
-            <Link to="/" style={linkStyle}>Mint & Rent</Link>
+            <LinkStyle to="/" >Market Place</LinkStyle>
+            <LinkStyle to="/" >Mint & Rent</LinkStyle>
             {/* <Link to="/" style={linkStyle}>About Us</Link>
             <Link to="/" style={linkStyle}>Docs</Link> */}
             </Nav>
@@ -50,7 +60,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
               </Navbar.Text>
             </Navbar.Collapse>
           </Navbar>
-        </div>
+        </NavContainer>
         
     );
 }

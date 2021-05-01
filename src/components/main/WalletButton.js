@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-
 export function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
   console.log("provider");
 
@@ -18,6 +17,10 @@ export function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
     text-decoration: none;
     margin: 5px 20px;
     padding: 8px 20px;
+
+    &:hover {
+    color: purple;
+    }
   `;
 
   return (
