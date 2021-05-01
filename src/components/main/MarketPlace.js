@@ -83,6 +83,10 @@ const CardButton = styled.button`
     color: white;
     padding: 5px;
     border-radius: 5px;
+    
+    &:hover {
+    color: white;
+  }
 `;
 
     return (
@@ -98,7 +102,7 @@ const CardButton = styled.button`
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                             </Card.Text>
-                            <CardButton>Rent</CardButton>
+                            <CardButton >Rent</CardButton>
                         </Card.Body>
                         </CardMarketContent>
                             <CardMarketContent>
