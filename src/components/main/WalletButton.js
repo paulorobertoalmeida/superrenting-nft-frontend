@@ -1,26 +1,27 @@
-import React from 'react';
-import {Button} from 'react-bootstrap';
+import React from 'react'
+import styled from 'styled-components'
 
 
 
 export function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
   console.log("provider");
 
-  const styleButton = {
-    backgroundColor: 'white',
-    border: 'none',
-    borderRadius: '8px',
-    color: '#282c34',
-    cursor: 'pointer',
-    fontSize: '16px',
-    fontWeight:'500',
-    textAlign: 'center',
-    textDecoration: 'none',
-    margin: '5px 20px',
-    padding: '12px 24px',
-  }
+  const WalletStyleButton = styled.button`
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 20px;
+    padding: 8px 20px;
+  `;
+
   return (
-    <Button style={styleButton}
+    <WalletStyleButton
       onClick={() => {
         if (!provider) {
           loadWeb3Modal();
@@ -30,6 +31,6 @@ export function WalletButton({ provider, loadWeb3Modal, logoutOfWeb3Modal }) {
       }}
     >
       {!provider ? "Connect Wallet" : "Disconnect Wallet"}
-    </Button>
+    </WalletStyleButton>
   );
 }
