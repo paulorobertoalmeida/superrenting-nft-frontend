@@ -13,26 +13,19 @@ export default function Header() {
         justify-content:center;
         height:800px;
         padding: 5rem;
-        margin:auto;
-        
-        &:hover {
-
-        }
-        
+        margin:auto;       
     `;
 
     const LeftContent = styled.div`
       padding: 9rem;
       height: 80%;
-      width: 50%;
-        
+      width: 50%;   
       `;
 
     const RightContent = styled.div`
         display: flex;
         flex-direction: column;
-        padding: 1rem;
-        
+        padding: 1rem;   
     `;
 
     const GradientButton = styled.button`
@@ -47,7 +40,7 @@ export default function Header() {
         padding: .7rem;
 
         &:hover {
-
+        color: purple;
         }
     `;
 

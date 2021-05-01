@@ -70,6 +70,21 @@ const CardMarketContent = styled.div`
     background-color: #fff;
 `;
 
+const GradientDiv = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    padding: 20px;
+`;
+
+const CardButton = styled.button`
+    width: 50px;
+    background: #22223b;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+`;
+
     return (
         <MainMarket>
             <h1>Market Place</h1>
@@ -83,7 +98,7 @@ const CardMarketContent = styled.div`
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                             </Card.Text>
-                            <Button variant="primary">Rent</Button>
+                            <CardButton>Rent</CardButton>
                         </Card.Body>
                         </CardMarketContent>
                             <CardMarketContent>
@@ -93,7 +108,7 @@ const CardMarketContent = styled.div`
                                             Some quick example text to build on the card title and make up the bulk of
                                             the card's content.
                                         </Card.Text>
-                                    <Button variant="primary">Rent</Button>
+                                    <CardButton>Rent</CardButton>
                                 </Card.Body>
                             </CardMarketContent>
                         <CardMarketContent>
@@ -103,29 +118,24 @@ const CardMarketContent = styled.div`
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                <Button variant="primary">Rent</Button>
+                                <CardButton>Rent</CardButton>
                             </Card.Body>
                         </CardMarketContent>
                         <CardMarketContent>
                         <Card.Body>
                             <Card.Title>Market Place 4</Card.Title>
-                            <Card.Text>
-                            Some quick example text to build on the card title and make up the bulk of
-                            the card's content.
-                            </Card.Text>
-                            <Button variant="primary">Rent</Button>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                </Card.Text>
+                            <CardButton>Rent</CardButton>
                         </Card.Body>
                     </CardMarketContent>
                 </CardMarketDiv>
             </InnerMarketContent>
-            <div style= {{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',  
-                padding:'20px',
-            }}>
-            <GradientButton>See The Offers</GradientButton>
-            </div>
+            <GradientDiv>
+                <GradientButton>See The Offers</GradientButton>
+            </GradientDiv>
         </MainMarket>
     )
 }
