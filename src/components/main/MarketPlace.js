@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 
 
-
-
 export default function MarketPlace() {
     const GradientButton = styled.div`
         color: white;
