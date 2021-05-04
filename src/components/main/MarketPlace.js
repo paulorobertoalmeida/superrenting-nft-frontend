@@ -1,21 +1,12 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import styled from 'styled-components'
-
+import { GradientButton } from './button-style.jsx'
 
 
 export default function MarketPlace() {
-    const GradientButton = styled.div`
-        color: white;
-        background: rgb(255,167,66);
-        background: linear-gradient(45deg, rgba(255,167,66,1) 0%, 
-        rgba(255,45,45,1) 37%, rgba(186,48,255,1) 62%, rgba(0,232,212,1) 80%);
-        border: none;
-        border-radius: 20px;
-        font-weight: 500;
-        padding: .7rem;
-    `;
-    
+
+
     {/* Not sure if this css is working*/}
     const CardStyle = {
         backgroundColor:'white',
@@ -82,11 +73,7 @@ const CardButton = styled.button`
     padding: 5px;
     border-radius: 5px;
     
-    &:hover {
-    color: white;
-  }
 `;
-
     return (
         <MainMarket>
             <h1>Market Place</h1>
@@ -100,7 +87,7 @@ const CardButton = styled.button`
                             Some quick example text to build on the card title and make up the bulk of
                             the card's content.
                             </Card.Text>
-                            <CardButton >Rent</CardButton>
+                            <CardButton>Rent</CardButton>
                         </Card.Body>
                         </CardMarketContent>
                             <CardMarketContent>
@@ -120,7 +107,7 @@ const CardButton = styled.button`
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                <CardButton>Rent</CardButton>
+                                <CardButton onClick={() => document.write('hello Bebe')}>Rent</CardButton>
                             </Card.Body>
                         </CardMarketContent>
                         <CardMarketContent>
@@ -136,7 +123,7 @@ const CardButton = styled.button`
                 </CardMarketDiv>
             </InnerMarketContent>
             <GradientDiv>
-                <GradientButton>See The Offers</GradientButton>
+                <GradientButton onClick={() => alert('Hello Suckers')}>See The Offers</GradientButton>
             </GradientDiv>
         </MainMarket>
     )

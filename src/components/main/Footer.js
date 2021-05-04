@@ -2,6 +2,8 @@ import React from 'react'
 import {Form, Button} from 'react-bootstrap'
 import styled from 'styled-components'
 
+import {LinkStyle} from './links-style'
+
 
 export default function Footer() {
 
@@ -72,19 +74,19 @@ export default function Footer() {
             </div>
             <LinksStyle>
                 <FooterLinks>
-                    <a>Telegram</a><p></p>
-                    <a>Careers</a><p></p>
-                    <a>Affiliates</a>
+                    <LinkStyle>Telegram</LinkStyle><p></p>
+                    <LinkStyle>Careers</LinkStyle><p></p>
+                    <LinkStyle>Affiliates</LinkStyle>
                 </FooterLinks>
                 <FooterLinks>
-                    <a>Github</a><p></p>
-                    <a>Docs</a><p></p>
-                    <a>Team</a>
+                    <LinkStyle>Github</LinkStyle><p></p>
+                    <LinkStyle>Docs</LinkStyle><p></p>
+                    <LinkStyle>Team</LinkStyle>
                 </FooterLinks>
                 <FooterLinks>
-                    <a>Protocols</a><p></p>
-                    <a>Partners</a><p></p>
-                    <a>Gradient Paper</a>
+                    <LinkStyle>Protocols</LinkStyle><p></p>
+                    <LinkStyle>Partners</LinkStyle><p></p>
+                    <LinkStyle>Gradient Paper</LinkStyle>
                 </FooterLinks>
                  
              </LinksStyle>   

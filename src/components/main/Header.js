@@ -1,7 +1,7 @@
 import { findByLabelText } from '@testing-library/dom';
 import React from 'react'
 import styled from 'styled-components'
-
+import { GradientButton } from './button-style.jsx'
 
 
 export default function Header() {
@@ -26,22 +26,6 @@ export default function Header() {
         display: flex;
         flex-direction: column;
         padding: 1rem;   
-    `;
-
-    const GradientButton = styled.button`
-        color: white;
-        background: rgb(255,167,66);
-        background: linear-gradient(45deg, rgba(255,167,66,1) 0%, rgba(255,45,45,1) 37%, 
-        rgba(186,48,255,1) 62%, rgba(0,232,212,1) 80%);
-        border: none;
-        border-radius: 20px;
-        font-weight: 500;
-        margin-top:2rem;
-        padding: .7rem;
-
-        &:hover {
-        color: purple;
-        }
     `;
 
     return (
