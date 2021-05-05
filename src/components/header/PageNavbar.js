@@ -38,8 +38,8 @@ const StyledLink = styled(NavLink)`
 
           
               <Switch>
-                <Route exact path='/' component={App}/> 
-                <Route  path='/marketplaceindex' component={MarketPlaceIndex}/>
+                <Route exact strict path='/' component={App}/> 
+                <Route  exact strict path='/marketplaceindex' component={MarketPlaceIndex}/>
                 <Route  path='/docs' />
               </Switch>
 

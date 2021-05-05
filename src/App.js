@@ -28,7 +28,7 @@ function App() {
   
 
   return (
-    <Router>
+    
       <GlobalStyleComponent>
       
         <PageNavbar 
@@ -47,7 +47,7 @@ function App() {
         <SocialMedia /> 
         <Footer />
       </GlobalStyleComponent>
-    </Router>
+    
   );
 }
 
