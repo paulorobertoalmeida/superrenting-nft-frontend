@@ -1,26 +1,20 @@
 import React from 'react'
 
+{/* Styles */}
+import styled from 'styled-components/'
+import {GlobalStyleComponent} from '../global-styles/global-fe-style.jsx'
+
+import {css} from './marketplace-style'
+
 export default function MarketPlaceIndex() {
-    const MarketContent = styled.div`
-    width:80%;
-    background-color: #fff;
-  `;
-    
-    
-    const InnerContent = styled.div`
-     color: white;
-     padding: 1rem;
-  `;
-
- 
-
+  
 
     return (
-        <MarketContent>
+        <GlobalStyleComponent>
 
             <h1>Market Place</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
             
-        </MarketContent>
+        </GlobalStyleComponent>
     )
 }

@@ -14,12 +14,14 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import useWeb3Modal from './hooks/useWeb3Modal'
 import MarketPage from './MarketPage'
 
+import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
+
 function App() {
-  const lpContainer = {
+  {/* const lpContainer = {
     background: 'rgb(4,1,32)',
     background: 'linear-gradient(45deg, rgba(4,1,32,1) 6%, rgba(21,1,53,1) 87%)',
     color: 'white'
-};
+}; */}
   const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
   console.log("Here");
   console.log(provider);
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <Router>
-      <div style={lpContainer}>
+      <GlobalStyleComponent>
       
         <PageNavbar 
         provider={provider}
@@ -57,7 +59,7 @@ function App() {
         <Games />
         <SocialMedia /> */}
         <Footer />
-      </div>
+      </GlobalStyleComponent>
     </Router>
   );
 }
