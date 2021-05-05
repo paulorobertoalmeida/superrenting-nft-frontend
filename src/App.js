@@ -1,27 +1,25 @@
 import './App.css'
 import React from 'react'
-import PageNavbar from './components/main/PageNavbar'
-import Header from './components/main/Header'
+import PageNavbar from './components/header/PageNavbar'
+import Header from './components/header/Header'
 import MarketPlace from './components/main/MarketPlace'
-import LastRented from './components/main/LastRented'
-import AboutUs from './components/main/AboutUs'
-import LorenIpsun from './components/main/LorenIpsun'
-import TopRenters from './components/main/TopRenters'
-import Games from './components/main/Games'
-import SocialMedia from './components/main/SocialMedia'
-import Footer from './components/main/Footer'
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import LastRented from './components/last-rented/LastRented'
+import AboutUs from './components/about/AboutUs'
+import LorenIpsun from './components/main/extras/LorenIpsun'
+import TopRenters from './components/last-rented/TopRenters'
+import Games from './components/games/Games'
+import SocialMedia from './components/socialmedia/SocialMedia'
+import Footer from './components/footer/Footer'
+import { BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import useWeb3Modal from './hooks/useWeb3Modal'
-import MarketPage from './MarketPage'
+
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
 
+import {MarketPlaceIndex} from './components/marketplace/MarketPlaceIndex'
+
 function App() {
-  {/* const lpContainer = {
-    background: 'rgb(4,1,32)',
-    background: 'linear-gradient(45deg, rgba(4,1,32,1) 6%, rgba(21,1,53,1) 87%)',
-    color: 'white'
-}; */}
+ 
   const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
   console.log("Here");
   console.log(provider);
@@ -38,26 +36,15 @@ function App() {
         loadWeb3Modal={loadWeb3Modal}
         logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
-        <Switch>
-        <Route exact path='/marketpage'>
-        <MarketPage />
-        </Route>
-        <Route exact path='/about'>
-        <MarketPage />
-        </Route>
-        <Route exact path='/docs'>
-        <MarketPage />
-        </Route>
         
-        </Switch>
         <Header />
         <MarketPlace />
-        {/* <LorenIpsun />
+         <LorenIpsun />
         <LastRented />
         <AboutUs />
         <TopRenters />
         <Games />
-        <SocialMedia /> */}
+        <SocialMedia /> 
         <Footer />
       </GlobalStyleComponent>
     </Router>
