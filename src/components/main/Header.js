@@ -1,7 +1,7 @@
 import { findByLabelText } from '@testing-library/dom';
 import React from 'react'
 import styled from 'styled-components'
-import { GradientButton } from './button-style.jsx'
+import { GradientButton } from '../global-styles/button-style.jsx'
 
 
 export default function Header() {

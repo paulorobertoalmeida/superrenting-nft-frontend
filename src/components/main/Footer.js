@@ -2,7 +2,7 @@ import React from 'react'
 import {Form, Button} from 'react-bootstrap'
 import styled from 'styled-components'
 
-import {LinkStyle} from './links-style'
+import {LinkStyle} from '../global-styles/links-style'
 
 
 export default function Footer() {

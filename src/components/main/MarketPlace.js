@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import styled from 'styled-components'
-import { GradientButton } from './button-style.jsx'
+import { GradientButton } from '../global-styles/button-style.jsx'
 
 
 export default function MarketPlace() {
