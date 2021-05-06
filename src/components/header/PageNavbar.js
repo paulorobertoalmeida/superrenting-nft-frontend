@@ -2,7 +2,7 @@ import MarketPlaceIndex from '../marketplace/MarketPlaceIndex'
 import React, {App} from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { WalletButton } from '../main/WalletButton'
-import { BrowserRouter as Router, Route, Link, Switch, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Switch, NavLink, Redirect } from 'react-router-dom'
 import styled from 'styled-components'
 import { NavContainer, LinkStyle, LinkStyles } from './global-header-styles.jsx'
 
@@ -31,15 +31,11 @@ const StyledLink = styled(NavLink)`
             <StyledLink to="/">Home</StyledLink> 
             <StyledLink to="/marketplaceindex" >Market Place</StyledLink>
             <StyledLink to="/" >Mint & Rent</StyledLink>
-            
-            {/* <Link to="/" style={linkStyle}>About Us</Link>
-            <Link to="/" style={linkStyle}>Docs</Link> */}
             </Nav>
 
-          
               <Switch>
                 <Route exact strict path='/' component={App}/> 
-                <Route  exact strict path='/marketplaceindex' component={MarketPlaceIndex}/>
+                <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
                 <Route  path='/docs' />
               </Switch>
 

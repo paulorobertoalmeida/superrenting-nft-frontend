@@ -10,13 +10,12 @@ import TopRenters from './components/last-rented/TopRenters'
 import Games from './components/games/Games'
 import SocialMedia from './components/socialmedia/SocialMedia'
 import Footer from './components/footer/Footer'
-import { BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom'
 import useWeb3Modal from './hooks/useWeb3Modal'
 
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
 
-import {MarketPlaceIndex} from './components/marketplace/MarketPlaceIndex'
+
 
 function App() {
  
@@ -30,13 +29,11 @@ function App() {
   return (
     
       <GlobalStyleComponent>
-      
         <PageNavbar 
         provider={provider}
         loadWeb3Modal={loadWeb3Modal}
         logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
-        
         <Header />
         <MarketPlace />
          <LorenIpsun />
