@@ -1,14 +1,7 @@
 import './App.css'
 import React from 'react'
 import PageNavbar from './components/header/PageNavbar'
-import Header from './components/header/Header'
-import MarketPlace from './components/main/MarketPlace'
-import LastRented from './components/last-rented/LastRented'
-import AboutUs from './components/about/AboutUs'
-import LorenIpsun from './components/main/extras/LorenIpsun'
-import TopRenters from './components/last-rented/TopRenters'
-import Games from './components/games/Games'
-import SocialMedia from './components/socialmedia/SocialMedia'
+
 import Footer from './components/footer/Footer'
 import useWeb3Modal from './hooks/useWeb3Modal'
 
@@ -21,6 +14,7 @@ import styled from 'styled-components'
 
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
+import HomePage from './components/main/HomePage'
 
 const StyledLink = styled(NavLink)`
   
@@ -39,7 +33,7 @@ function App() {
   console.log(loadWeb3Modal);
   console.log(logoutOfWeb3Modal);
   
-
+{/* Desestruturar a pagina e colocar no switch*/}
   return (
     <Router>
       <GlobalStyleComponent>
@@ -57,16 +51,10 @@ function App() {
             <Route exact strict path='/' component={App}/> 
             <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
             <Route  path='/docs' />
+            <HomePage />
           </Switch>
 
-        <Header />
-        <MarketPlace />
-         <LorenIpsun />
-        <LastRented />
-        <AboutUs />
-        <TopRenters />
-        <Games />
-        <SocialMedia /> 
+        
         <Footer />
       </GlobalStyleComponent>
       </Router>
