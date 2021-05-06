@@ -7,6 +7,7 @@ import LorenIpsun from '../main/extras/LorenIpsun'
 import TopRenters from '../last-rented/TopRenters'
 import Games from '../games/Games'
 import SocialMedia from '../socialmedia/SocialMedia'
+import LinksFooter from '../footer/LinksFooter'
 
 export default function HomePage() {
     return (
@@ -19,6 +20,7 @@ export default function HomePage() {
             <TopRenters />
             <Games />
             <SocialMedia /> 
+            <LinksFooter />
         </div>
     )
 }

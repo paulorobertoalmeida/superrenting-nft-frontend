@@ -19,9 +19,8 @@ export default function MarketPlace() {
             display: flex;
             flex-direction:column;
             width: 85%; 
-            background: rgb(34,0,29);
-            background: linear-gradient(0deg, rgba(34,0,29,1) 0%, 
-            rgba(106,22,93,1) 32%, rgba(157,38,138,1) 66%, rgba(255,0,216,1) 100%);
+            background: rgb(131,58,180);
+background: linear-gradient(29deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
             margin: auto; 
             padding: 20px;
             border-radius: 2em;

@@ -1,8 +1,8 @@
 import './App.css'
 import React from 'react'
 import PageNavbar from './components/header/PageNavbar'
-
 import Footer from './components/footer/Footer'
+
 import useWeb3Modal from './hooks/useWeb3Modal'
 
 import {Nav} from 'react-bootstrap'
@@ -15,6 +15,7 @@ import styled from 'styled-components'
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
 import HomePage from './components/main/HomePage'
+import MintAndRent from './components/main/MintAndRent'
 
 const StyledLink = styled(NavLink)`
   
@@ -42,18 +43,16 @@ function App() {
         loadWeb3Modal={loadWeb3Modal}
         logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
-        <StyledLink to="/">Home</StyledLink> 
-        <StyledLink to="/marketplaceindex" >Market Place</StyledLink>
-        <StyledLink to="/" >Mint & Rent</StyledLink>
-      
-
-          <Switch>
-            <Route exact strict path='/' component={App}/> 
-            <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
-            <Route  path='/docs' />
-            <HomePage />
+        <Nav>
+            <StyledLink to="/">Home</StyledLink> 
+            <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
+            <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
+            <Switch>
+            <Route exact strict path='/' component={HomePage}/> 
+            <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
+            <Route path='/mintandrent' component={MintAndRent} />
           </Switch>
-
+          </Nav>
         
         <Footer />
       </GlobalStyleComponent>

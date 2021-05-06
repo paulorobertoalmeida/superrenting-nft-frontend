@@ -4,7 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 import { WalletButton } from '../main/WalletButton'
 import { BrowserRouter as Router, Route, Link, Switch, NavLink, Redirect } from 'react-router-dom'
 import styled from 'styled-components'
-import { NavContainer, LinkStyle, LinkStyles } from './global-header-styles.jsx'
+import { NavContainer, LinkStyle, LinkStyles } from './header-global-styles'
 
 
 const StyledLink = styled(NavLink)`
@@ -21,24 +21,12 @@ const StyledLink = styled(NavLink)`
     console.log(props.logoutOfWeb3Modal);
 
     return (
-      <Router>
+      
         <NavContainer>
             <Navbar>
             <h3>SuperRenting.</h3>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">           
-    {/* <Nav>
-            <StyledLink to={"/"}>Home</StyledLink> 
-            <StyledLink to={"/marketplaceindex"} >Market Place</StyledLink>
-            <StyledLink to="/" >Mint & Rent</StyledLink>
-            </Nav>
-
-              <Switch>
-                <Route exact strict path='/' component={App}/> 
-                <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
-                <Route  path='/docs' />
-              </Switch>
-    */}
                 <Navbar.Text>
               <WalletButton
                   provider={props.provider}
@@ -49,7 +37,7 @@ const StyledLink = styled(NavLink)`
             </Navbar.Collapse>
           </Navbar>
         </NavContainer>
-        </Router>
+        
     );
 }
 
