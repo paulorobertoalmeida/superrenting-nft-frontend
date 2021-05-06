@@ -27,9 +27,9 @@ const StyledLink = styled(NavLink)`
             <h3>SuperRenting.</h3>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">           
-            <Nav>
-            <StyledLink to="/">Home</StyledLink> 
-            <StyledLink to="/marketplaceindex" >Market Place</StyledLink>
+    {/* <Nav>
+            <StyledLink to={"/"}>Home</StyledLink> 
+            <StyledLink to={"/marketplaceindex"} >Market Place</StyledLink>
             <StyledLink to="/" >Mint & Rent</StyledLink>
             </Nav>
 
@@ -38,8 +38,8 @@ const StyledLink = styled(NavLink)`
                 <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
                 <Route  path='/docs' />
               </Switch>
-
-              <Navbar.Text>
+    */}
+                <Navbar.Text>
               <WalletButton
                   provider={props.provider}
                   loadWeb3Modal={props.loadWeb3Modal}

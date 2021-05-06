@@ -12,10 +12,24 @@ import SocialMedia from './components/socialmedia/SocialMedia'
 import Footer from './components/footer/Footer'
 import useWeb3Modal from './hooks/useWeb3Modal'
 
+import {Nav} from 'react-bootstrap'
+
+import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom'
+
+import MarketPlaceIndex from './components/marketplace/MarketPlaceIndex'
+import styled from 'styled-components'
+
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
 
-
+const StyledLink = styled(NavLink)`
+  
+    color: white;  
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  
+`;
 
 function App() {
  
@@ -27,13 +41,24 @@ function App() {
   
 
   return (
-    
+    <Router>
       <GlobalStyleComponent>
         <PageNavbar 
         provider={provider}
         loadWeb3Modal={loadWeb3Modal}
         logoutOfWeb3Modal={logoutOfWeb3Modal}
         />
+        <StyledLink to="/">Home</StyledLink> 
+        <StyledLink to="/marketplaceindex" >Market Place</StyledLink>
+        <StyledLink to="/" >Mint & Rent</StyledLink>
+      
+
+          <Switch>
+            <Route exact strict path='/' component={App}/> 
+            <Route path='/marketplaceindex' exact component={MarketPlaceIndex}/>
+            <Route  path='/docs' />
+          </Switch>
+
         <Header />
         <MarketPlace />
          <LorenIpsun />
@@ -44,7 +69,7 @@ function App() {
         <SocialMedia /> 
         <Footer />
       </GlobalStyleComponent>
-    
+      </Router>
   );
 }
 
