@@ -32,21 +32,21 @@ const mainStyle={
 
     return (
         <MainStyle>
-        <h1 style={{margin:'auto'}}>Social Media</h1>
-        <SmStyle>
-            <div style={{margin:'5px'}}>
-                <span style={roundedStyle}></span>
-            </div>
-            <div style={{margin:'5px'}}>
-                <span style={roundedStyle}></span>
-            </div>
-            <div style={{margin:'5px'}}>
-                <span style={roundedStyle}></span>
-            </div>
-            <div style={{margin:'5px'}}>
-            <span style={roundedStyle}></span>
-            </div>
-        </div> 
+            <h1 style={{margin:'auto'}}>Social Media</h1>
+                <SmStyle>
+                    <RoundedDiv>
+                        <RoundedStyle></RoundedStyle>
+                    </RoundedDiv>
+                    <RoundedDiv>
+                        <RoundedStyle></RoundedStyle>
+                    </RoundedDiv>
+                    <RoundedDiv>
+                        <RoundedStyle></RoundedStyle>
+                    </RoundedDiv>
+                    <RoundedDiv>
+                        <RoundedStyle></RoundedStyle>
+                    </RoundedDiv> 
+                 </SmStyle>   
         </MainStyle>
     )
 }

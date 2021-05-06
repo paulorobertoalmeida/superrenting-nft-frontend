@@ -10,7 +10,7 @@ export const MainStyle=styled.div`
 
 export const SmStyle = styled.div`
         display: flex;
-        flex-cirection: row;
+        flex-direction: row;
         align-content: center;
         margin: auto;
         padding: 2rem;
@@ -24,6 +24,9 @@ export const RoundedStyle = styled.div`
         background-color: #fff;
         display: inline-block;
         margin: auto;
-        border-radius: 50%;
-        
+        border-radius: 50%;   
     `;
+
+export const RoundedDiv = styled.div`
+margin:5px;
+`;
