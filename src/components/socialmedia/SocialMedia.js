@@ -1,4 +1,5 @@
 import React from 'react'
+import {MainStyle, SmStyle, } from './social-global-style'
 
 export default function SocialMedia() {
 const mainStyle={
@@ -30,9 +31,9 @@ const mainStyle={
     };
 
     return (
-        <div style={mainStyle}>
+        <MainStyle>
         <h1 style={{margin:'auto'}}>Social Media</h1>
-        <div style={smStyle}>
+        <SmStyle>
             <div style={{margin:'5px'}}>
                 <span style={roundedStyle}></span>
             </div>
@@ -46,6 +47,6 @@ const mainStyle={
             <span style={roundedStyle}></span>
             </div>
         </div> 
-        </div>
+        </MainStyle>
     )
 }
