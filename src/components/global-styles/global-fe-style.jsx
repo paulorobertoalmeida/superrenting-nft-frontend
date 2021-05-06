@@ -9,17 +9,18 @@ export  const GlobalStyleComponent = styled.div`
 `;
 
 export const MintingContainer = styled.div`
-         display: flex;
+            display: flex;
             flex-direction:column;
-            width: 85%; 
+            width: 90%; 
             height: 800px;
             background: rgb(131,58,180);
             background: linear-gradient(29deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
             margin: auto; 
-            padding: 20px;
+            padding:auto;
             border-radius: 2em;
         & > h1 { 
-            margin: auto;
+            margin: 5px;
+            padding 1rem;
         }
 
         & > p { 

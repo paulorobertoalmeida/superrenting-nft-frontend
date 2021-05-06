@@ -34,7 +34,6 @@ function App() {
   console.log(loadWeb3Modal);
   console.log(logoutOfWeb3Modal);
   
-{/* Desestruturar a pagina e colocar no switch*/}
   return (
     <Router>
       <GlobalStyleComponent>

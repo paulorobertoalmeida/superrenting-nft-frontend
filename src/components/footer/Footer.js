@@ -1,8 +1,6 @@
 import React from 'react'
-import {Form, Button} from 'react-bootstrap'
-import styled from 'styled-components'
-import {MainFooter, LinkStyles, FooterLinks, CopyrightStyle, LinksStyle } from './footer-global-style'
-import {LinkStyle} from '../global-styles/links-style'
+import {MainFooter, CopyrightStyle} from './footer-global-style'
+
 
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-import MarketPlaceIndex from '../marketplace/MarketPlaceIndex'
+
 import React, {App} from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { WalletButton } from '../main/WalletButton'

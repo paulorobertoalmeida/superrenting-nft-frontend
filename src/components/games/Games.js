@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
+import {} from './games-global-style'
 
 export default function Games() {
     const gradientButton = {
