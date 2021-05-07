@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap'
-import {} from './games-global-style'
+import { GradientButton } from './games-global-style'
 
 export default function Games() {
     const gradientButton = {
@@ -74,7 +74,7 @@ export default function Games() {
                 justifyContent: 'center',  
                 padding:'20px',
             }}>
-            <Button variant="warning" style={gradientButton}>See The Games</Button>
+            <GradientButton>See The Games</GradientButton>
             </div>
         </div>
     )
