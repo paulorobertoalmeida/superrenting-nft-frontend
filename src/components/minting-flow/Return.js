@@ -1,12 +1,21 @@
 import React from 'react'
-import GradientButton from '../global-styles/button-style'
+import {GradientButton} from '../global-styles/button-style'
+import { MainContainerFlow, InnerContainerFlow, ContentFlow, NFTDisplay, Text, Paragraph } from '../minting-flow/flow-global'
+
 
 export default function Return() {
     return (
-        <div>
-            <h1> Return the NFT's you rented </h1>
-            <h4>thats the NFT you rented</h4>
-            <GradientButton>Return Nft</GradientButton>
-        </div>
+
+        <MainContainerFlow>
+            <InnerContainerFlow>
+                <ContentFlow>
+                <Text>Mint Your Nft</Text>
+                    <NFTDisplay> Your Nft is Here </NFTDisplay>
+                    <div>
+                        <GradientButton>Minting</GradientButton>
+                    </div>
+                    </ContentFlow>
+            </InnerContainerFlow>
+        </MainContainerFlow>
     )
 }

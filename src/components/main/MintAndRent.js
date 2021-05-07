@@ -1,17 +1,22 @@
 import React from 'react'
 import {GradientButton} from '../global-styles/button-style'
-import {MintingContainer } from '../global-styles/global-fe-style'
+import { MainContainerFlow, InnerContainerFlow, ContentFlow, NFTDisplay, Text, Paragraph } from '../minting-flow/flow-global'
+
 
 export default function MintAndRent() {
     return (
-        <MintingContainer>
-            <div>Hello guys</div>
-                <div>
+
+        <MainContainerFlow>
+            <InnerContainerFlow>
+                <ContentFlow>
+                <Text>Mint Your Nft</Text>
+                    <NFTDisplay> Your Nft is Here </NFTDisplay>
                     <div>
                         <GradientButton>Minting</GradientButton>
                     </div>
-            </div>
-        </MintingContainer>
+                    </ContentFlow>
+            </InnerContainerFlow>
+        </MainContainerFlow>
     )
 }
 
