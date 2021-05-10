@@ -44,8 +44,6 @@ const StyledLink = styled(NavLink)`
 export default PageNavbar;
 
 
-
-
 {/*
 
 <NavContainer>
