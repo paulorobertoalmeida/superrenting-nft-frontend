@@ -106,7 +106,7 @@ const CardButton = styled.button`
                                         Some quick example text to build on the card title and make up the bulk of
                                         the card's content.
                                     </Card.Text>
-                                <CardButton onClick={() => document.write('hello Bebe')}>Rent</CardButton>
+                                <CardButton>Rent</CardButton>
                             </Card.Body>
                         </CardMarketContent>
                         <CardMarketContent>
@@ -122,7 +122,7 @@ const CardButton = styled.button`
                 </CardMarketDiv>
             </InnerMarketContent>
             <GradientDiv>
-                <GradientButton onClick={() => alert('Hello Suckers')}>See The Offers</GradientButton>
+                <GradientButton>See The Offers</GradientButton>
             </GradientDiv>
         </MainMarket>
     )
