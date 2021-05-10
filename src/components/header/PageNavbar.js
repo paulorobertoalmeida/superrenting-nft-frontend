@@ -57,11 +57,7 @@ export default PageNavbar;
                   <StyledLink to="/">Home</StyledLink> 
                       <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
                       <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
-                    <Switch>
-                      <Route exact strict path='/' component={HomePage}/> 
-                      <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
-                      <Route path='/mintandrent' component={MintAndRent} />
-                </Switch>
+                    
                 
                 <Navbar.Collapse className="justify-content-end">           
                 <Navbar.Text>

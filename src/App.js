@@ -45,20 +45,28 @@ function App(props) {
             <StyledLink to="/">Home</StyledLink> 
                       <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
                       <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
+                      <Switch>
+                      <Route exact strict path='/' /> 
+                      <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
+                      <Route path='/mintandrent' component={MintAndRent} />
+                </Switch>
           
-              <Navbar.Collapse className="justify-content-end">           
+                  <Navbar.Collapse className="justify-content-end"> 
+                            
                   <Navbar.Text>
-                <WalletButton
+                  
+                  <WalletButton
                     provider={props.provider}
                     loadWeb3Modal={props.loadWeb3Modal}
                     logoutOfWeb3Modal={props.logoutOfWeb3Modal}
-          />
+                    />
           
-        </Navbar.Text>
-      </Navbar.Collapse>
-    </Navbar>
-  </NavContainer>
-  <HomePage />
+                </Navbar.Text>
+                
+              </Navbar.Collapse>
+            </Navbar>
+          </NavContainer>
+           <HomePage />
         <Footer />
       </GlobalStyleComponent>
       
