@@ -42,3 +42,37 @@ const StyledLink = styled(NavLink)`
 }
 
 export default PageNavbar;
+
+
+
+
+{/*
+
+<NavContainer>
+        <Nav>
+          <Navbar>
+            <h3>SuperRenting.</h3>
+            <Navbar.Toggle />
+              
+                  <StyledLink to="/">Home</StyledLink> 
+                      <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
+                      <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
+                    <Switch>
+                      <Route exact strict path='/' component={HomePage}/> 
+                      <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
+                      <Route path='/mintandrent' component={MintAndRent} />
+                </Switch>
+                
+                <Navbar.Collapse className="justify-content-end">           
+                <Navbar.Text>
+                  <WalletButton
+                  provider={provider}
+                  loadWeb3Modal={loadWeb3Modal}
+                  logoutOfWeb3Modal={logoutOfWeb3Modal}
+                  />
+                
+                </Navbar.Text>
+                </Navbar.Collapse>
+            </Navbar>
+            </Nav>
+</NavContainer> */}

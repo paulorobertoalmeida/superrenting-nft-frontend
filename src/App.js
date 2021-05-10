@@ -25,7 +25,7 @@ const StyledLink = styled(NavLink)`
     margin-right: 5px;
     display: flex;
     align-items: center;
-  
+
 `;
 
 function App(props) {
@@ -42,33 +42,28 @@ function App(props) {
         <NavContainer>
           <Navbar>
             <h3>SuperRenting.</h3>
-            <Navbar.Toggle />
-            <Navbar.Collapse className="justify-content-end">           
-                    <Navbar.Text>
-                  <WalletButton
-                  provider={provider}
-                  loadWeb3Modal={loadWeb3Modal}
-                  logoutOfWeb3Modal={logoutOfWeb3Modal}
-                  />
-              <Nav>
-                  <StyledLink to="/">Home</StyledLink> 
-                  <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
-                  <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
-                  <Switch>
-                  <Route exact strict path='/' component={HomePage}/> 
-                  <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
-                  <Route path='/mintandrent' component={MintAndRent} />
-                </Switch>
-                </Nav>
-                </Navbar.Text>
-                </Navbar.Collapse>
-            </Navbar>
-          </NavContainer>
+            <StyledLink to="/">Home</StyledLink> 
+                      <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
+                      <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
           
-        
+              <Navbar.Collapse className="justify-content-end">           
+                  <Navbar.Text>
+                <WalletButton
+                    provider={props.provider}
+                    loadWeb3Modal={props.loadWeb3Modal}
+                    logoutOfWeb3Modal={props.logoutOfWeb3Modal}
+          />
+          
+        </Navbar.Text>
+      </Navbar.Collapse>
+    </Navbar>
+  </NavContainer>
+  <HomePage />
         <Footer />
       </GlobalStyleComponent>
+      
       </Router>
+      
   );
 }
 
