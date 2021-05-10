@@ -5,20 +5,22 @@ import Footer from './components/footer/Footer'
 
 import useWeb3Modal from './hooks/useWeb3Modal'
 
-import {Nav, } from 'react-bootstrap'
 
 import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom'
 
 import MarketPlaceIndex from './components/marketplace/MarketPlaceIndex'
 import styled from 'styled-components'
+import { Navbar, Nav } from 'react-bootstrap'
+import { WalletButton } from './components/main/WalletButton'
+
 
 
 import {GlobalStyleComponent} from './components/global-styles/global-fe-style'
 import HomePage from './components/main/HomePage'
 import MintAndRent from './components/main/MintAndRent'
+import { NavContainer, LinkStyle, LinkStyles } from './components/header/header-global-styles'
 
 const StyledLink = styled(NavLink)`
-  
     color: white;  
     margin-right: 5px;
     display: flex;
@@ -26,7 +28,7 @@ const StyledLink = styled(NavLink)`
   
 `;
 
-function App() {
+function App(props) {
  
   const [provider, loadWeb3Modal, logoutOfWeb3Modal] = useWeb3Modal();
   console.log("Here");
@@ -37,21 +39,32 @@ function App() {
   return (
     <Router>
       <GlobalStyleComponent>
-        <PageNavbar 
-        provider={provider}
-        loadWeb3Modal={loadWeb3Modal}
-        logoutOfWeb3Modal={logoutOfWeb3Modal}
-        />
-        <Nav>
-            <StyledLink to="/">Home</StyledLink> 
-            <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
-            <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
-            <Switch>
-            <Route exact strict path='/' component={HomePage}/> 
-            <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
-            <Route path='/mintandrent' component={MintAndRent} />
-          </Switch>
-          </Nav>
+        <NavContainer>
+          <Navbar>
+            <h3>SuperRenting.</h3>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">           
+                    <Navbar.Text>
+                  <WalletButton
+                  provider={provider}
+                  loadWeb3Modal={loadWeb3Modal}
+                  logoutOfWeb3Modal={logoutOfWeb3Modal}
+                  />
+              <Nav>
+                  <StyledLink to="/">Home</StyledLink> 
+                  <StyledLink to="/marketplaceindex" > Market Place </StyledLink>
+                  <StyledLink to="/mintandrent" >Mint & Rent</StyledLink>
+                  <Switch>
+                  <Route exact strict path='/' component={HomePage}/> 
+                  <Route path='/marketplaceindex' component={MarketPlaceIndex}/>
+                  <Route path='/mintandrent' component={MintAndRent} />
+                </Switch>
+                </Nav>
+                </Navbar.Text>
+                </Navbar.Collapse>
+            </Navbar>
+          </NavContainer>
+          
         
         <Footer />
       </GlobalStyleComponent>
