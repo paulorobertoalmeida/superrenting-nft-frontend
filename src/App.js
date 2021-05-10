@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer'
 
 import useWeb3Modal from './hooks/useWeb3Modal'
 
-import {Nav} from 'react-bootstrap'
+import {Nav, } from 'react-bootstrap'
 
 import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom'
 

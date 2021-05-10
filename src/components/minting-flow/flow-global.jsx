@@ -41,4 +41,4 @@ export const Text = styled.h1`
 export const Paragraph = styled.p`
     margin-top: 1rem;
     color: #fff;
-`;
+`; 
